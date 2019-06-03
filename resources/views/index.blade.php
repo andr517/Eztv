@@ -11,7 +11,7 @@
     </div>
     <div class="column is-one-quarter">
       <h2 class="subtitle">Players of the Week</h2>
-      <hr>
+      <div class="is-divider" data-content="OR">dfasf</div>
       <img src="https://static.hltv.org/images/playerprofile/thumb/8520/400.jpeg?v=7" alt="">
       <ul>
         <li><strong>Name: </strong>Виктор</li>

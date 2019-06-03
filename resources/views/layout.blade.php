@@ -34,14 +34,14 @@
           <a href="/forums" class="navbar-item">
             Forums
           </a>
-          <?php if (isset($_SESSION['loggedin'])) { ?>
-          <a href="/profile" class="navbar-item">
+          @if (session('status'))
+          <a href="/home" class="navbar-item">
             My Profile
           </a>
-          <?php } ?>
+        @endif
         </div>
         <div class="navbar-end">
-          <?php if (!isset($_SESSION['loggedin'])) { ?>
+          <?php if(!$user = Auth::user()) { ?>
           <a href="/register" class="navbar-item" style="border-left: 1px solid rgba(204, 204, 204, .65);">
             Register <i class="fas fa-user-plus log-icon"></i>
           </a>
@@ -52,7 +52,7 @@
           <a href="/logout" class="navbar-item" style="border-left: 1px solid rgba(204, 204, 204, .65);">
             Log out <i class="fas fa-sign-out-alt log-icon"></i>
           </a>
-          <?php } ?>
+        <?php } ?>
         </div>
       </div>
     </nav>
@@ -66,7 +66,7 @@
         <p>
           Copyright © <script>
             document.write(new Date().getFullYear());
-            </script> <strong>EZTV</strong>
+            </script> <strong>EZTV</strong>. All rights reserved.
           </p>
         </div>
     </body>
