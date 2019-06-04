@@ -4,8 +4,7 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class teams extends Model
+class Teams extends Model
 {
 
-}
 }

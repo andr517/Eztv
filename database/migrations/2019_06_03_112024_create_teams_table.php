@@ -18,6 +18,8 @@ class CreateTeamsTable extends Migration
             $table->timestamps();
             $table->integer('rank');
             $table->string('name');
+            $table->text('teamUrl');
+            $table->text('logoUrl');
         });
     }
 
