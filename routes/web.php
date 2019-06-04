@@ -15,6 +15,7 @@ Route::get('/', 'PagesController@index');
 Route::get('/teams', 'PagesController@teams');
 Route::get('/matches', 'PagesController@matches');
 Route::get('/forums', 'PagesController@forums');
+Route::get('/profile', 'PagesController@profile');
 
 Auth::routes();
 

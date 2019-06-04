@@ -26,4 +26,8 @@ class PagesController extends Controller
         return view('forums');
     }
     
+    public function profile()
+    {
+        return view('profile');
+    }
 }
