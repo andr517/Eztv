@@ -20,6 +20,8 @@ class CreateTeamsTable extends Migration
             $table->string('name');
             $table->text('teamUrl');
             $table->text('logoUrl');
+            $table->text('country');
+            $table->text('flag');
         });
     }
 
