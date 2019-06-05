@@ -49,6 +49,9 @@
             Sign in <i class="fas fa-user log-icon"></i>
           </a>
           <?php } else { ?>
+          <a href="/profile" class="navbar-item" style="border-left: 1px solid rgba(204, 204, 204, .65);">
+            Profile <i class="fas fa-user log-icon"></i>
+          </a>
           <a href="/logout" class="navbar-item" style="border-left: 1px solid rgba(204, 204, 204, .65);">
             Log out <i class="fas fa-sign-out-alt log-icon"></i>
           </a>
