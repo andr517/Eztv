@@ -37,13 +37,10 @@ class PagesController extends Controller
     {
         return view('forums');
     }
-<<<<<<< HEAD
     
     public function profile()
     {
         return view('profile');
     }
-=======
 
->>>>>>> a2438acb544152fdb22e08ff69f307a6c845b821
 }
