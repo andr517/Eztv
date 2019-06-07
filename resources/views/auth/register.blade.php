@@ -4,6 +4,9 @@
 
 @section('content')
 <div class="section">
+  <div class="columns is-centered">
+  <div class="card">
+    <div class="card-content">
   <div class="content has-text-centered">
     <h1 class="title">Register</h1>
   </div>
@@ -57,5 +60,8 @@
     <input class="button" type="submit" name="submit" value="{{ __('Register') }}">
   </div>
 </form>
+</div>
+</div>
+</div>
 </div>
 @endsection

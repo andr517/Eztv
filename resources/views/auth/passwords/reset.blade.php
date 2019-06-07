@@ -1,13 +1,12 @@
-@extends('layouts.app')
+@extends('layout')
+
+@section('title', 'Reset Password - EZTV')
 
 @section('content')
-<div class="container">
-    <div class="row justify-content-center">
-        <div class="col-md-8">
-            <div class="card">
-                <div class="card-header">{{ __('Reset Password') }}</div>
-
-                <div class="card-body">
+  <div class="section">
+    <div class="content has-text-centered">
+      <h1 class="title">Reset Password</h1>
+    </div>
                     <form method="POST" action="{{ route('password.update') }}">
                         @csrf
 
@@ -57,9 +56,5 @@
                             </div>
                         </div>
                     </form>
-                </div>
-            </div>
-        </div>
-    </div>
 </div>
 @endsection

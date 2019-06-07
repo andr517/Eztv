@@ -3,12 +3,16 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
+use App\News;
 
 class PagesController extends Controller
 {
     public function index()
     {
-        return view('index');
+
+      $news = News::all();
+       return view('index', ['news' => $news]);
     }
 
     public function teams()
@@ -25,5 +29,5 @@ class PagesController extends Controller
     {
         return view('forums');
     }
-    
+
 }

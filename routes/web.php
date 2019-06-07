@@ -19,3 +19,4 @@ Route::get('/forums', 'PagesController@forums');
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+Route::get('logout', 'HomeController@logout');

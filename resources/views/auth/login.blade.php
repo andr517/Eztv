@@ -4,6 +4,9 @@
 
 @section('content')
 <div class="section">
+  <div class="columns is-centered">
+  <div class="card">
+    <div class="card-content">
   <div class="content has-text-centered">
     <h1 class="title">Sign in</h1>
   </div>
@@ -42,13 +45,16 @@
     </div>
   </div>
   <div class="field">
-    <input class="button" type="submit" name="submit" value="Login">
-    @if (Route::has('password.request'))
-      <a href="{{ route('password.request') }}">
-        {{ __('Forgot Your Password?') }}
-      </a>
-    @endif
+    <input class="button is-fullwidth" type="submit" name="submit" value="Login">
   </div>
+  @if (Route::has('password.request'))
+    <a href="{{ route('password.request') }}">
+      {{ __('Forgot Your Password?') }}
+    </a>
+  @endif
 </form>
+</div>
+</div>
+</div>
 </div>
 @endsection

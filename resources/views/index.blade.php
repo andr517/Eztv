@@ -3,30 +3,117 @@
 @section('title', 'Home - EZTV')
 
 @section('content')
-  <div class="columns">
+
+<div class="columns">
     <div class="column">
-      <img src="https://i0.wp.com/www.vpesports.com/wp-content/uploads/2018/08/Edward-EL-2018-John-Nowak-_0002_399795_0735_CC.jpg?resize=700%2C466&ssl=1" alt="">
-      Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum. Nam quam nunc, blandit vel, luctus pulvinar, hendrerit id, lorem. Maecenas nec odio et ante tincidunt tempus. Donec vitae sapien ut libero venenatis faucibus. Nullam quis ante. Etiam sit amet orci eget eros faucibus tincidunt. Duis leo. Sed fringilla mauris sit amet nibh. Donec sodales sagittis magna. Sed consequat, leo eget bibendum sodales, augue velit cursus nunc,
-      <br><br><br>      Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum. Nam quam nunc, blandit vel, luctus pulvinar, hendrerit id, lorem. Maecenas nec odio et ante tincidunt tempus. Donec vitae sapien ut libero venenatis faucibus. Nullam quis ante. Etiam sit amet orci eget eros faucibus tincidunt. Duis leo. Sed fringilla mauris sit amet nibh. Donec sodales sagittis magna. Sed consequat, leo eget bibendum sodales, augue velit cursus nunc,
+        <figure class="image is-2by2">
+            <img src="https://i2.wp.com/www.vpesports.com/wp-content/uploads/2019/06/dhmd_liquid.jpg?resize=1200%2C550&ssl=1"
+              alt="Banner">
+            </img>
+            <hr>
+            <a href="#"><button type="button" class="button" name="button">New
+                    Post</button></a>
+            @foreach($news as $post)
+            <div class="columns is-multiline">
+                <div class="column">
+                    <figure class="image is-2by1">
+                        <img src="{{ $post->img }}" alt="Thumbnail">
+                    </figure>
+                </div>
+                <div class="column">
+                    <li><span class="news-date">{{ $post->created_at }}</span></li>
+                    <h1 class="news-title"><a href="#">{{ $post->title }}</a></h1>
+                    <span class="news-content">{{ $post->content }}</span>
+                    <li><span class="news-author">By <a href="#">{{ $post->user->name }}</a></span></li>
+                    <?php if(Auth::check() && Auth::user()->group = 1) { ?>
+                    <br>
+                    <a href="#"><button type="button" class="button is-small"
+                          name="button">Edit</button></a>
+                    <a href="#"><button type="button" class="button is-small"
+                          name="button">Delete</button></a>
+                    <?php } ?>
+                </div>
+                <hr>
+            </div>
+            @endforeach
     </div>
+
     <div class="column is-one-quarter">
-      <h2 class="subtitle">Players of the Week</h2>
-      <div class="is-divider" data-content="OR">dfasf</div>
-      <img src="https://static.hltv.org/images/playerprofile/thumb/8520/400.jpeg?v=7" alt="">
-      <ul>
-        <li><strong>Name: </strong>Виктор</li>
-        <li><strong>Age: </strong>14</li>
-        <li><strong>Team: </strong>Гоблинские Решения</li>
-        <li><strong>From: </strong>Russia</li>
-      </ul>
-      <hr>
-      <img src="https://static.hltv.org/images/playerprofile/thumb/11188/400.jpeg?v=3" alt="">
-      <ul>
-        <li><strong>Name: </strong>Björn Olsson</li>
-        <li><strong>Age: </strong>26</li>
-        <li><strong>Team: </strong>Lidl</li>
-        <li><strong>From: </strong>Sweden</li>
-      </ul>
+        <div class="list is-hoverable">
+            <li class="list-item list-title">Ranking</li>
+            <a class="list-item">
+                1. <img src="https://static.hltv.org/images/team/logo/5973" alt=""
+                  style="width:14px; height: 14px;"> Liquid
+            </a>
+            <a class="list-item">
+                2. <img src="https://static.hltv.org/images/team/logo/6665" alt=""
+                  style="width:14px; height: 14px;"> Astralis
+            </a>
+            <a class="list-item">
+                3. <img src="https://static.hltv.org/images/team/logo/4869" alt=""
+                  style="width:14px; height: 14px;"> ENCE
+            </a>
+            <a class="list-item">
+                4. <img src="https://static.hltv.org/images/team/logo/9565" alt=""
+                  style="width:14px; height: 14px;"> Vitality
+            </a>
+        </div>
+        <hr>
+        <div class="list is-hoverable">
+            <li class="list-item list-title">Today's Matches</li>
+            <a class="list-item">
+                <img src="https://static.hltv.org/images/team/logo/5973" alt=""
+                  style="width:14px; height: 14px;"> Liquid vs. <img src="https://static.hltv.org/images/team/logo/6665"
+                  alt="" style="width:14px; height: 14px;"> Astralis 13:00
+            </a>
+            <a class="list-item">
+                <img src="https://static.hltv.org/images/team/logo/6665" alt=""
+                  style="width:14px; height: 14px;"> Astralis vs. <img src="https://static.hltv.org/images/team/logo/4869"
+                  alt="" style="width:14px; height: 14px;"> ENCE 14:30
+            </a>
+            <a class="list-item">
+                <img src="https://static.hltv.org/images/team/logo/4869" alt=""
+                  style="width:14px; height: 14px;"> ENCE vs. <img src="https://static.hltv.org/images/team/logo/6667"
+                  alt="" style="width:14px; height: 14px;"> FaZe 14:00
+            </a>
+            <a class="list-item">
+                <img src="https://static.hltv.org/images/team/logo/9565" alt=""
+                  style="width:14px; height: 14px;"> Vitality vs. <img src="https://static.hltv.org/images/team/logo/5973"
+                  alt="" style="width:14px; height: 14px;"> Liquid 18:30
+            </a>
+        </div>
+        <h2 class="news-title">Player of the Week</h2>
+        <div class="card">
+            <figure class="image is-1by1">
+                <img src="https://static.hltv.org/images/playerprofile/thumb/8520/400.jpeg?v=7"
+                  alt="">
+            </figure>
+            <div class="card-content has-text-centered player-week">
+                <li><img src="https://static.hltv.org/images/bigflags/30x20/DK.gif"
+                      alt="" style="width:14px; height: 14px;"> <strong>BhopgudN</strong></li>
+                <li><img src="https://static.hltv.org/images/team/logo/6667"
+                      alt="" style="width:14px; height: 14px;"> <strong>Team
+                        FaZe</strong></li>
+            </div>
+        </div>
+        <ul class="social">
+            <li> <a href="#" title="">
+                    <i class="icon fab fa-twitter"> </i>
+                </a></li>
+            <li> <a href="#" title="">
+                    <i class="icon fab fa-facebook"> </i>
+                </a></li>
+            <li> <a href="#" title="">
+                    <i class="icon fab fa-youtube"> </i>
+                </a></li>
+            <li> <a href="#" title="">
+                    <i class="icon fab fa-instagram"> </i>
+                </a></li>
+            <li> <a href="#" title="">
+                    <i class="icon fab fa-discord"> </i>
+                </a></li>
+        </ul>
     </div>
-  </div>
+</div>
+
 @endsection

@@ -34,11 +34,11 @@
           <a href="/forums" class="navbar-item">
             Forums
           </a>
-          @if (session('status'))
+          <?php if($user = Auth::user()) { ?>
           <a href="/home" class="navbar-item">
             My Profile
           </a>
-        @endif
+        <?php } ?>
         </div>
         <div class="navbar-end">
           <?php if(!$user = Auth::user()) { ?>
@@ -69,5 +69,6 @@
             </script> <strong>EZTV</strong>. All rights reserved.
           </p>
         </div>
+    </div>
     </body>
   </html>
