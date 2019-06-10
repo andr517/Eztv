@@ -13,6 +13,7 @@
     <label class="label">{{ __('Name') }}</label>
     <div class="control">
       <input class="input form-control @error('name') is-invalid @enderror" name="name" value="{{ old('name') }}" required autocomplete="name" autofocus>
+      <input class="input form-control @error('picture') is-invalid @enderror" type="hidden" name="picture" value="https://www.flynz.co.nz/wp-content/uploads/profile-placeholder.png" required autocomplete="picture" autofocus>
       @error('name')
         <span class="invalid-feedback" role="alert">
           <strong>{{ $message }}</strong>
