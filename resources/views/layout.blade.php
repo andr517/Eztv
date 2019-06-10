@@ -21,7 +21,7 @@
       </div>
       <div class="navbar-menu">
         <div class="navbar-start">
-          <a href="/" class="navbar-item logo"><img src="https://placeholder.com/wp-content/uploads/2018/10/placeholder.com-logo1.png" alt="" style="width: 150px;"></a>
+            <a href="/" class="navbar-item logo"><img src="/images/eztvlogo.png" alt="" style="width: 130px;max-height:100px;"></a>
           <a href="/" class="navbar-item">
             News
           </a>
