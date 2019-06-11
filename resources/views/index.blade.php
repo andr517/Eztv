@@ -11,21 +11,23 @@
               alt="Banner">
             </img>
             <hr>
-            <a href="#"><button type="button" class="button" name="button">New
+            <?php if(Auth::check() && Auth::user()->group > 0) { ?>
+            <a href="/create"><button type="button" class="button" name="button">New
                     Post</button></a>
-            @foreach($news as $post)
+                    <?php } ?>
+            @foreach($news->sortByDesc('id') as $post)
             <div class="columns is-multiline">
                 <div class="column">
                     <figure class="image is-2by1">
-                        <img src="{{ $post->img }}" alt="Thumbnail">
+                        <a href="{{ URL('/posts/'.$post->id )}}"><img src="{{ $post->img }}" alt="Thumbnail"></a>
                     </figure>
                 </div>
                 <div class="column">
                     <li><span class="news-date">{{ $post->created_at }}</span></li>
-                    <h1 class="news-title"><a href="#">{{ $post->title }}</a></h1>
+                    <h1 class="news-title"><a href="{{ URL('/posts/'.$post->id )}}">{{ $post->title }}</a></h1>
                     <span class="news-content">{{ $post->content }}</span>
                     <li><span class="news-author">By <a href="#">{{ $post->user->name }}</a></span></li>
-                    <?php if(Auth::check() && Auth::user()->group = 1) { ?>
+                    <?php if(Auth::check() && Auth::user()->group > 0) { ?>
                     <br>
                     <a href="#"><button type="button" class="button is-small"
                           name="button">Edit</button></a>
@@ -41,22 +43,18 @@
     <div class="column is-one-quarter">
         <div class="list is-hoverable">
             <li class="list-item list-title">Ranking</li>
-            <a class="list-item">
-                1. <img src="https://static.hltv.org/images/team/logo/5973" alt=""
-                  style="width:14px; height: 14px;"> Liquid
-            </a>
-            <a class="list-item">
-                2. <img src="https://static.hltv.org/images/team/logo/6665" alt=""
-                  style="width:14px; height: 14px;"> Astralis
-            </a>
-            <a class="list-item">
-                3. <img src="https://static.hltv.org/images/team/logo/4869" alt=""
-                  style="width:14px; height: 14px;"> ENCE
-            </a>
-            <a class="list-item">
-                4. <img src="https://static.hltv.org/images/team/logo/9565" alt=""
-                  style="width:14px; height: 14px;"> Vitality
-            </a>
+            <?php $i = 1; ?>
+            @foreach($teams as $team)
+              <?php if($i > 5)
+              break;
+              ?>
+              <a class="list-item" href="{{ URL('/teams/team/'.$team->id )}}">
+                {{ $i++ }}.
+                <img src="{{ $team->logoUrl }}" alt="{{ $team->name }}"
+                  style="width:14px; height: 14px;">
+                  {{ $team->name }}
+              </a>
+            @endforeach
         </div>
         <hr>
         <div class="list is-hoverable">

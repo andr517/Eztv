@@ -5,19 +5,25 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use App\News;
+use Auth;
 
 class PagesController extends Controller
 {
-    public function index()
-    {
-
-      $news = News::all();
-       return view('index', ['news' => $news]);
-    }
-
     public function teams()
     {
-        return view('teams');
+
+        $teams = DB::table('teams')->get();
+
+        return view('teams', ['teams' => $teams]);
+
+    }
+    public function team()
+    {
+
+        $teams = DB::table('teams')->get();
+
+        return view('team', ['teams' => $teams]);
+
     }
 
     public function matches()
@@ -28,6 +34,11 @@ class PagesController extends Controller
     public function forums()
     {
         return view('forums');
+    }
+
+    public function profile()
+    {
+        return view('profile');
     }
 
 }
