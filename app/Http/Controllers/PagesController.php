@@ -38,7 +38,8 @@ class PagesController extends Controller
 
     public function profile()
     {
-        return view('profile');
+        $teams = DB::table('teams')->get();
+         return view('profile', ['teams' => $teams]);
     }
 
 }
