@@ -3,10 +3,6 @@
 @section('title', 'Team - EZTV')
 
 @section('content')
-<?php
-$request = request()->route('id');
-$teams = DB::table('teams')->find($request);
- ?>
  <div class="section">
  <nav class="level">
    <div class="level-item has-text-centered">
@@ -36,21 +32,31 @@ $teams = DB::table('teams')->find($request);
    </div>
  </nav>
 </div>
-<div class="columns is-multiline has-text-centered">
+<div class="columns is-multiline">
+  @foreach ($players as $player)
   <div class="column">
-    1
+
+    <div class="card">
+  <div class="card-image">
+    <figure class="image is-3by3">
+      <img src="{{$player->playerUrl}}" alt="Placeholder image">
+    </figure>
   </div>
-  <div class="column">
-    2
+  <div class="card-content">
+    <div class="media">
+      <div class="media-left">
+      </div>
+      <div class="media-content">
+        <p class="subtitle is-5">{{$player->alias}} <img style="width:15px;height:10px;" src="{{$player->flag}}"></p>
+        <p class="subtitle is-6">{{$player->name}}</p>
+        <p>{{$player->age}}</p>
+        <p>{{$player->rating}}</p>
+      </div>
+    </div>
   </div>
-  <div class="column">
-    3
+</div>
+
   </div>
-  <div class="column">
-    4
-  </div>
-  <div class="column">
-    5
-  </div>
+  @endforeach
 </div>
 @endsection
