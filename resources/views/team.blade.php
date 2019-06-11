@@ -24,7 +24,7 @@ $teams = DB::table('teams')->find($request);
    </div>
    <div class="level-item has-text-centered">
      <div>
-       <p class="heading">Country</p>
+       <p class="heading">Country <img src="<?php echo $teams->flag; ?>" style="width:25px;height:15px;"></p>
        <p class="title"><?php echo $teams->country; ?></p>
      </div>
    </div>
