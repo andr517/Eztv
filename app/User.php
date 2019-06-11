@@ -37,6 +37,11 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
     ];
 
+    public function news()
+    {
+      return $this->hasMany('App\News');
+    }
+
     public function forums() {
         return $this->belongsToMany('app\Forum', 'comments', 'user_id', 'forum_id');
     }

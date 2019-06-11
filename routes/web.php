@@ -11,13 +11,18 @@
 |
 */
 
-Route::get('/', 'PagesController@index');
 Route::get('/teams', 'PagesController@teams');
 Route::get('/teams/team/{id}', 'PagesController@team');
 Route::get('/matches', 'PagesController@matches');
 Route::get('/forums', 'PagesController@forums');
 Route::get('/profile', 'PagesController@profile');
 
+Route::get('/', 'PostsController@index');
+Route::get('/posts/{id}', 'PostsController@post');
+Route::get('/create', 'PostsController@create');
+Route::post('/posts/create', 'PostsController@store');
+
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+Route::get('logout', 'HomeController@logout');

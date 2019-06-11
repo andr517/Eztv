@@ -4,15 +4,14 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+
 use App\Players;
 use App\Teams;
+use App\News;
+use Auth;
+
 class PagesController extends Controller
 {
-    public function index()
-    {
-        return view('index');
-    }
-
     public function teams()
     {
 
@@ -51,7 +50,8 @@ class PagesController extends Controller
 
     public function profile()
     {
-        return view('profile');
+        $teams = DB::table('teams')->get();
+         return view('profile', ['teams' => $teams]);
     }
 
 }
