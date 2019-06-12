@@ -17,15 +17,11 @@ Route::get('/createTeam', 'TeamsController@createTeamView');
 Route::post('/teams/createTeam', 'TeamsController@createTeamPost');
 
 Route::get('/matches', 'PagesController@matches');
-<<<<<<< HEAD
 Route::get('/forums', 'PagesController@forums');
 Route::get('/profile', 'ProfileController@profile');
 Route::get('/profile/edit', 'ProfileController@edit');
 Route::post('/profile/edit', 'ProfileController@update');
 
-=======
-Route::get('/profile', 'PagesController@profile');
->>>>>>> 05fea80fa0aa98d3ff042fb4f26a7968478391c4
 
 Route::get('/', 'PostsController@index');
 Route::get('/posts/create', 'PostsController@create');
