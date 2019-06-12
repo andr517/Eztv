@@ -20,8 +20,8 @@
                         </figure>
                     </div>
                     <div class="media-content">
-                        <a href="{{ URL('/teams/team/'.$team->id )}}">
-                            <p class="title is-4">{{$team->name}}</p>
+                        <a href="{{ URL('/teams/team/'.$team->id )}}" class="team-link">
+                            <p class="title is-4 team-name">{{$team->name}}</p>
                         </a>
                         <p class="subtitle is-6">Rank: {{$team->rank}}</p>
                     </div>

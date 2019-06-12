@@ -150,6 +150,29 @@ li {
     list-style-type: none;
 }
 
+.welcome-text {
+    color: #fff;
+    padding-top: 160px;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 1.5rem;
+    text-shadow: 1px 1px 2px #000;
+}
+
+.team-link:hover {
+    text-decoration: none;
+}
+
+.team-name {
+    transition: color .3s;
+}
+
+.team-name:hover {
+    color: #00b0cd;
+    transition: color .3s;
+    text-decoration: none !important;
+}
+
 /***********
 NAVBAR BEGINS
 ***********/

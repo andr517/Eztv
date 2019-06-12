@@ -6,6 +6,8 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use App\News;
 use App\User;
+use App\Teams;
+use App\Players;
 use Auth;
 
 class PostsController extends Controller
@@ -13,16 +15,19 @@ class PostsController extends Controller
   public function index()
   {
     $news = News::all();
-    $teams = DB::table('teams')->get();
-     return view('index', ['news' => $news, 'teams' => $teams]);
+    $teams = Teams::all();
+    $player = Players::with('teams')->find(2);
+
+     return view('index', ['news' => $news, 'teams' => $teams, 'player' => $player]);
   }
 
   public function post()
   {
     $request = request()->route('id');
     $user = News::with('user')->where('id', $request)->get();
-    $post = DB::table('news')->find($request);
-    $teams = DB::table('teams')->get();
+    $post = News::all()->find($request);
+    $teams = Teams::all();
+
      return view('posts.post', ['user' => $user, 'post' => $post, 'teams' => $teams]);
   }
 
@@ -38,7 +43,6 @@ class PostsController extends Controller
     $post->img = request('img');
     $post->content = request('content');
     $post->user_id = Auth::user()->id;
-
     $post->save();
 
     return redirect('/');
@@ -47,7 +51,8 @@ class PostsController extends Controller
   public function edit($id)
   {
     $request = request()->route('id');
-    $post = DB::table('news')->find($request);
+    $post = News::all()->find($request);
+
     return view('posts.edit', ['id' => $id, 'post' => $post]);
   }
 
@@ -56,7 +61,6 @@ class PostsController extends Controller
     $title = request('title');
     $img = request('img');
     $content = request('content');
-    // DB::update('UPDATE news SET title = ?, img = ?, content = ? WHERE id = ?', [$title, $img, $content, $id]);
 
     News::where('id', $id)->update(['title' => $title, 'img' => $img, 'content' => $content]);
 
