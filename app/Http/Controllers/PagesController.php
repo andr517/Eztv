@@ -20,11 +20,6 @@ class PagesController extends Controller
         return view('matches');
     }
 
-    public function forums()
-    {
-        return view('forums');
-    }
-
     public function profile()
     {
         $teams = DB::table('teams')->get();

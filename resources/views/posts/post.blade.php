@@ -9,7 +9,8 @@
            <img src="{{ $post->img }}" alt="Post image">
          </figure>
          <li><h1 class="news-title">{{ $post->title }}</h1></li>
-         <li><span class="news-author">By <a href="#">{{ $post->user_id }}</a> | <span class="news-date">{{ $post->created_at }}</span></li>
+         <li><span class="news-author">By <a href="#">{{ $user[0]->user->name }}</a>
+         <span class="news-date">{{ date("Y-m-d", strtotime($post->created_at)) }}</span></li>
          <li></span></li>
          <li><p class="news-content" style="margin-top: 15px;">{{ $post->content }}</p></li>
        </div>
