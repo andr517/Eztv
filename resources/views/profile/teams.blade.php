@@ -1,3 +1,9 @@
+@php
+  use App\Teams;
+
+  $teams = Teams::all();
+    
+@endphp
 @extends('layout')
 
 @section('title', 'Profile - EZTV')
@@ -11,8 +17,8 @@
       {{-- Content --}}
       <div class="tile is-parent" style="max-height:300px">
           <article class="tile is-child">
-            <p class="title is-4">Info</p>
-            <p class="subtitle">{{ Auth::user()->info }}</p>
+            <p class="title is-4">Teams</p>
+            <p class="subtitle">{{ $teams[0]->name}}</p>
              <a href="edit/"> <button class="button is-medium" name="edit">Edit</button></a>
           </article>
       </div>

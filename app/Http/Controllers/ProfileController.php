@@ -23,13 +23,19 @@ class ProfileController extends Controller
   public function edit()
   {
       $teams = DB::table('teams')->get();
-       return view('edit', ['teams' => $teams]);
+       return view('profile\edit', ['teams' => $teams]);
   }
 
   public function info()
   {
       $teams = DB::table('teams')->get();
        return view('profile\info', ['teams' => $teams]);
+  }
+
+  public function teams()
+  {
+      $teams = DB::table('teams')->get();
+       return view('profile\teams', ['teams' => $teams]);
   }
 
   public function update()

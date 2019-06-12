@@ -22,6 +22,7 @@ Route::get('/profile', 'ProfileController@profile');
 Route::get('/profile/edit', 'ProfileController@edit');
 Route::post('/profile/edit', 'ProfileController@update');
 Route::get('/profile/info', 'ProfileController@info');
+Route::get('/profile/teams', 'ProfileController@teams');
 
 
 Route::get('/', 'PostsController@index');

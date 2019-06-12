@@ -8,7 +8,7 @@
   use Illuminate\Foundation\Auth\RegistersUsers;
   use App\News;
 @endphp
-@if ($user = Auth::user())
+
 
     <div class="hero" style="background-image: url('https://images2.alphacoders.com/743/thumb-350-74302.jpg'); background-size: contain;">
     <div class="tile is-ancestor">
@@ -54,7 +54,7 @@
             <a class="navbar-item" href="/profile/info/">
               Info
             </a>
-            <a class="navbar-item">
+            <a class="navbar-item" href="/profile/teams/">
               Teams
             </a>
             <a class="navbar-item">
@@ -81,8 +81,3 @@
 
 
 
-@else
-  <div class="section is-large has-text-centered">
-    <h1 class="title">You don't have permission to view this page!</h1>
-  </div>
-@endif
