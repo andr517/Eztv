@@ -15,7 +15,10 @@ Route::get('/teams', 'PagesController@teams');
 Route::get('/teams/team/{id}', 'PagesController@team');
 Route::get('/matches', 'PagesController@matches');
 Route::get('/forums', 'PagesController@forums');
-Route::get('/profile', 'PagesController@profile');
+Route::get('/profile', 'ProfileController@profile');
+Route::get('/profile/edit', 'ProfileController@edit');
+Route::post('/profile/edit', 'ProfileController@update');
+
 
 Route::get('/', 'PostsController@index');
 Route::get('/posts/{id}', 'PostsController@post');

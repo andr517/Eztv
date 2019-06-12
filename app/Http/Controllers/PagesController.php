@@ -35,11 +35,4 @@ class PagesController extends Controller
     {
         return view('forums');
     }
-
-    public function profile()
-    {
-        $teams = DB::table('teams')->get();
-         return view('profile', ['teams' => $teams]);
-    }
-
 }
