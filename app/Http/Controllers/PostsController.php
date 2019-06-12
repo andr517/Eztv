@@ -20,9 +20,10 @@ class PostsController extends Controller
   public function post()
   {
     $request = request()->route('id');
+    $user = News::with('user')->where('id', $request)->get();
     $post = DB::table('news')->find($request);
     $teams = DB::table('teams')->get();
-     return view('posts.post', ['post' => $post, 'teams' => $teams]);
+     return view('posts.post', ['user' => $user, 'post' => $post, 'teams' => $teams]);
   }
 
   public function create()
@@ -30,7 +31,7 @@ class PostsController extends Controller
     return view('posts.create');
   }
 
-  public function store()
+  public function createsave()
   {
     $post = new News();
     $post->title = request('title');
@@ -39,6 +40,32 @@ class PostsController extends Controller
     $post->user_id = Auth::user()->id;
 
     $post->save();
+
+    return redirect('/');
+  }
+
+  public function edit($id)
+  {
+    $request = request()->route('id');
+    $post = DB::table('news')->find($request);
+    return view('posts.edit', ['id' => $id, 'post' => $post]);
+  }
+
+  public function editsave($id)
+  {
+    $title = request('title');
+    $img = request('img');
+    $content = request('content');
+    // DB::update('UPDATE news SET title = ?, img = ?, content = ? WHERE id = ?', [$title, $img, $content, $id]);
+
+    News::where('id', $id)->update(['title' => $title, 'img' => $img, 'content' => $content]);
+
+    return redirect('/');
+  }
+
+  public function delete($id)
+  {
+    DB::delete('DELETE from news WHERE id = ?',[$id]);
 
     return redirect('/');
   }

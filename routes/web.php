@@ -11,19 +11,29 @@
 |
 */
 
-Route::get('/teams', 'PagesController@teams');
-Route::get('/teams/team/{id}', 'PagesController@team');
+Route::get('/teams', 'TeamsController@teams');
+Route::get('/teams/team/{id}', 'TeamsController@team');
+Route::get('/createTeam', 'TeamsController@createTeamView');
+Route::post('/teams/createTeam', 'TeamsController@createTeamPost');
+
 Route::get('/matches', 'PagesController@matches');
+<<<<<<< HEAD
 Route::get('/forums', 'PagesController@forums');
 Route::get('/profile', 'ProfileController@profile');
 Route::get('/profile/edit', 'ProfileController@edit');
 Route::post('/profile/edit', 'ProfileController@update');
 
+=======
+Route::get('/profile', 'PagesController@profile');
+>>>>>>> 05fea80fa0aa98d3ff042fb4f26a7968478391c4
 
 Route::get('/', 'PostsController@index');
+Route::get('/posts/create', 'PostsController@create');
 Route::get('/posts/{id}', 'PostsController@post');
-Route::get('/create', 'PostsController@create');
-Route::post('/posts/create', 'PostsController@store');
+Route::get('/posts/edit/{id}', 'PostsController@edit');
+Route::post('/posts/edit/{id}', 'PostsController@editsave');
+Route::post('/posts/create', 'PostsController@createsave');
+Route::get('/posts/delete/{id}', 'PostsController@delete');
 
 Auth::routes();
 

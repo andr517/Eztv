@@ -2,7 +2,7 @@
 
 use Illuminate\Database\Seeder;
 use App\Teams;
-
+use App\Players;
 
 class MatchesSeed extends Seeder
 {
@@ -54,7 +54,7 @@ $faze = Teams::create(array(
 'flag'         => 'https://static.hltv.org/images/bigflags/30x20/EU.gif',
 ));
 $navi = Teams::create(array(
-'name'         => 'Natus Vincere',
+'name'         => 'NAVI',
 'rank'         => '6',
 'teamUrl'      => 'https://navi.gg/upload/10/b6/u_5c1ca66bed003.png',
 'logoUrl'      => 'https://static.hltv.org/images/team/logo/4608',
@@ -92,6 +92,61 @@ $Nrg = Teams::create(array(
 'logoUrl'      => 'https://static.hltv.org/images/team/logo/6673',
 'country'      => 'United States',
 'flag'         => 'https://static.hltv.org/images/bigflags/30x20/US.gif',
+));
+//players
+$liquid1 = Players::create(array(
+'name'         => 'Keith Markovic',
+'alias'        => 'NAF',
+'age'          => '21',
+'rating'       => '1.18',
+'flag'         => 'https://static.hltv.org/images/bigflags/30x20/CA.gif',
+'playerUrl'    => 'https://static.hltv.org//images/playerprofile/bodyshot/compressed/8520.png',
+'team_id'      =>  $liquid->id,
+));
+$liquid2 = Players::create(array(
+'name'         => 'Nick Cannella',
+'alias'        => 'nitr0',
+'age'          => '23',
+'rating'       => '1.04',
+'flag'         => 'https://static.hltv.org/images/bigflags/30x20/US.gif',
+'playerUrl'    => 'https://static.hltv.org//images/playerprofile/bodyshot/compressed/7687.png',
+'team_id'      =>  $liquid->id,
+));
+$liquid3 = Players::create(array(
+'name'         => 'Jonathan Jablonowski',
+'alias'        => 'EliGE',
+'age'          => '21',
+'rating'       => '1.17',
+'flag'         => 'https://static.hltv.org/images/bigflags/30x20/US.gif',
+'playerUrl'    => 'https://static.hltv.org//images/playerprofile/bodyshot/compressed/8738.png',
+'team_id'      =>  $liquid->id,
+));
+$liquid4 = Players::create(array(
+'name'         => 'Jake Yip',
+'alias'        => 'Stewie2K',
+'age'          => '21',
+'rating'       => '1.06',
+'flag'         => 'https://static.hltv.org/images/bigflags/30x20/US.gif',
+'playerUrl'    => 'https://static.hltv.org//images/playerprofile/bodyshot/compressed/8797.png',
+'team_id'      =>  $liquid->id,
+));
+$liquid5 = Players::create(array(
+'name'         => 'Russel Van Dulken',
+'alias'        => 'Twistzz',
+'age'          => '19',
+'rating'       => '1.18',
+'flag'         => 'https://static.hltv.org/images/bigflags/30x20/CA.gif',
+'playerUrl'    => 'https://static.hltv.org//images/playerprofile/bodyshot/compressed/10394.png',
+'team_id'      =>  $liquid->id,
+));
+$astralis1 = Players::create(array(
+'name'         => 'Andreas Højsleth',
+'alias'        => 'Xyp9x',
+'age'          => '23',
+'rating'       => '1.08',
+'flag'         => 'https://static.hltv.org/images/bigflags/30x20/DK.gif',
+'playerUrl'    => 'https://static.hltv.org//images/playerprofile/bodyshot/compressed/4954.png',
+'team_id'      =>  $astralis->id,
 ));
 
     }

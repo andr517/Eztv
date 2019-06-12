@@ -31,26 +31,23 @@
           <a href="/matches" class="navbar-item">
             Matches
           </a>
-          <a href="/forums" class="navbar-item">
-            Forums
-          </a>
         </div>
         <div class="navbar-end">
-          <?php if(!$user = Auth::user()) { ?>
-          <a href="/register" class="navbar-item" style="border-left: 1px solid rgba(204, 204, 204, .65);">
+          @if(!$user = Auth::user())
+            <a href="/register" class="navbar-item" style="border-left: 1px solid rgba(204, 204, 204, .65);">
             Register <i class="fas fa-user-plus log-icon"></i>
-          </a>
-          <a href="/login" class="navbar-item">
+            </a>
+            <a href="/login" class="navbar-item">
             Sign in <i class="fas fa-user log-icon"></i>
-          </a>
-          <?php } else { ?>
-          <a href="/profile" class="navbar-item" style="border-left: 1px solid rgba(204, 204, 204, .65);">
+            </a>
+          @else
+            <a href="/profile" class="navbar-item" style="border-left: 1px solid rgba(204, 204, 204, .65);">
             Profile <i class="fas fa-user log-icon"></i>
-          </a>
-          <a href="/logout" class="navbar-item" style="border-left: 1px solid rgba(204, 204, 204, .65);">
+            </a>
+            <a href="/logout" class="navbar-item" style="border-left: 1px solid rgba(204, 204, 204, .65);">
             Log out <i class="fas fa-sign-out-alt log-icon"></i>
-          </a>
-        <?php } ?>
+            </a>
+          @endif
         </div>
       </div>
     </nav>
