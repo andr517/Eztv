@@ -8,9 +8,9 @@
   <div class="column">
     <div class="tile is-ancestor">
         <div class="tile is-vertical">
-          <div class="tile" style="max-height:250px">
+          <div class="tile" style="">
             <div class="tile is-parent">
-              <article class="tile image is-child is-4">
+              <article class="tile image is-child is-4" style="max-height:250px; max-width:230px;">
                 <figure class="image is-4">
                   <img src="{{ Auth::user()->picture }}">
                 </figure>
@@ -29,21 +29,41 @@
         <article class="tile is-child">
           <p class="title">Wide tile</p>
           <p class="subtitle">Aligned with the right tile</p>
-          <form class="content">
+          <form action="{{ 'Auth\RegisterController@update' }}" method="POST" >
+            <button class="button is-medium" name="edit">Edit</button>
+          </form>
+          @if (true)
+          <form class="content" >
             <div class="field">
               <label class="label">Name</label>
               <div class="control">
-                <input class="input" type="text" placeholder="e.g Alex Smith">
+                <input class="input" name="name" type="text" placeholder="e.g Alex Smith">
               </div>
             </div>
 
             <div class="field">
               <label class="label">Email</label>
               <div class="control">
-                <input class="input" type="email" placeholder="e.g. alexsmith@gmail.com">
+                <input class="input" name="email" type="email" placeholder="e.g. alexsmith@gmail.com">
               </div>
             </div>
+
+            <div class="field">
+              <label class="label">Info</label>
+              <div class="control">
+                <input class="input" name="info" type="text" placeholder="e.g. alexsmith@gmail.com">
+              </div>
+            </div>
+
+            <div class="field">
+              <label class="label">Profile Picture</label>
+              <div class="control">
+                <input class="input" name="picture" type="text" placeholder="e.g. alexsmith@gmail.com">
+              </div>
+            </div>
+            <input class="button is-medium" type="submit" name="" id="">
           </form>
+          @endif
         </article>
     </div>
   </div>

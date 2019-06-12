@@ -11,10 +11,17 @@
 |
 */
 
-Route::get('/teams', 'PagesController@teams');
-Route::get('/teams/team/{id}', 'PagesController@team');
+Route::get('/teams', 'TeamsController@teams');
+Route::get('/teams/team/{id}', 'TeamsController@team');
+Route::get('/createTeam', 'TeamsController@createTeamView');
+Route::post('/teams/createTeam', 'TeamsController@createTeamPost');
+
 Route::get('/matches', 'PagesController@matches');
-Route::get('/profile', 'PagesController@profile');
+Route::get('/forums', 'PagesController@forums');
+Route::get('/profile', 'ProfileController@profile');
+Route::get('/profile/edit', 'ProfileController@edit');
+Route::post('/profile/edit', 'ProfileController@update');
+
 
 Route::get('/', 'PostsController@index');
 Route::get('/posts/create', 'PostsController@create');
