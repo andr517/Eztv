@@ -36,5 +36,25 @@
         </div>
     </div>
     @endforeach
+    @if ($user = Auth::user() && Auth::user()->group > 0)
+    <div class="column is-3">
+        <div class="card">
+            <div class="card-image">
+                <figure class="image is-256x128">
+                  <img src="https://image.flaticon.com/icons/svg/60/60732.svg" alt="">
+                </figure>
+            </div>
+            <div class="card-content">
+                <div class="media">
+                    <div class="media-left">
+                    </div>
+                    <div class="media-content  has-text-centered">
+                      <a href="/createTeam"><button type="button" class="button" name="button">Add New Team</button></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    @endif
 </div>
 @endsection
