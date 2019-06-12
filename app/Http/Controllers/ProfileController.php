@@ -14,16 +14,6 @@ use Auth;
 
 class ProfileController extends Controller
 {
-      // public function update(array $data)
-  // {
-  //     return User::update([
-  //         'name' => $data['name'],
-  //         'info' => $data['info'],
-  //         'picture' => $data['picture'],
-  //         'email' => $data['email'],
-  //         'password' => Hash::make($data['password'])
-  //     ]);
-  // }
   public function profile()
   {
       $teams = DB::table('teams')->get();
@@ -36,6 +26,12 @@ class ProfileController extends Controller
        return view('edit', ['teams' => $teams]);
   }
 
+  public function info()
+  {
+      $teams = DB::table('teams')->get();
+       return view('profile\info', ['teams' => $teams]);
+  }
+
   public function update()
   {
         // $data = $this->validate($request, [
@@ -45,14 +41,10 @@ class ProfileController extends Controller
         $user = Auth::user();
           $user->name = request('name');
           $user->email = request('email');
+          $user->emailAnswer = request('answer');
           $user->info = request('info');
           $user->picture = request('picture');
           $user->save();
           return redirect('/profile');
-     // return User::update([
-          
-
-      //]);
-      // return redirect('/profile');
   }
 }
