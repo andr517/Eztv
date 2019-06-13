@@ -4,6 +4,7 @@
   use App\Teams;
   use App\Players;
 
+  $users = User::orderBy('name', 'ASC')->get();
   $news = News::all();
   $teams = Teams::all();
   $player = Players::with('teams')->find(2);
@@ -11,7 +12,7 @@
 
 <div class="column is-one-quarter">
   <div class="list is-hoverable">
-    <li class="list-item list-title">Ranking</li>
+    <li class="list-item list-title" style="border-bottom: 1px solid #dbdbdb">Ranking</li>
     <?php $i = 1; ?>
     @foreach($teams as $team)
       <?php if($i > 5)
@@ -43,7 +44,17 @@
         style="width:14px; height: 14px;"> Vitality vs. <img src="https://static.hltv.org/images/team/logo/5973" alt="" style="width:14px; height: 14px;"> Liquid 18:30
     </a>
   </div>
-  <h2 class="news-title">Player of the Week</h2>
+  <hr>
+  <div class="list is-hoverable">
+    <li class="list-item list-title" style="border-bottom: 1px solid #dbdbdb">Memberlist</li>
+    @foreach($users as $user)
+      <a class="list-item" href="{{ URL('/users/'.$user->id )}}">
+        {{ $user->name }}
+      </a>
+    @endforeach
+  </div>
+  <hr>
+  <h2 class="news-title" style="text-align: center;">Player of the Week</h2>
   <div class="card">
     <figure class="image is-1by1">
       <a href="{{ URL('/teams/team/'.$player->teams->id )}}"><img src="{{ $player->playerUrl }}" alt="Player Image"></a>

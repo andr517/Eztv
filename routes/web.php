@@ -16,16 +16,18 @@ Route::get('/teams/team/{id}', 'TeamsController@team');
 Route::get('/createTeam', 'TeamsController@createTeamView');
 Route::post('/teams/createTeam', 'TeamsController@createTeamPost');
 
-Route::get('/matches', 'PagesController@matches');
-Route::get('/forums', 'PagesController@forums');
 Route::get('/profile', 'ProfileController@profile');
+Route::get('/profile/{id}', 'ProfileController@profile');
 Route::get('/profile/edit', 'ProfileController@edit');
 Route::post('/profile/edit', 'ProfileController@update');
 Route::get('/profile/info', 'ProfileController@info');
 Route::get('/profile/teams', 'ProfileController@teams');
 
+Route::get('/users', 'UserController@userList');
+Route::get('/users/{id}', 'UserController@user');
 
 Route::get('/', 'PostsController@index');
+Route::get('/posts', 'PostsController@index');
 Route::get('/posts/create', 'PostsController@create');
 Route::get('/posts/{id}', 'PostsController@post');
 Route::get('/posts/edit/{id}', 'PostsController@edit');
@@ -35,5 +37,5 @@ Route::get('/posts/delete/{id}', 'PostsController@delete');
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/home', 'ProfileController@profile');
 Route::get('logout', 'HomeController@logout');

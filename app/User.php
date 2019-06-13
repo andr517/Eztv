@@ -45,8 +45,4 @@ class User extends Authenticatable
     {
       return $this->hasMany('App\News');
     }
-
-    public function forums() {
-        return $this->belongsToMany('app\Forum', 'comments', 'user_id', 'forum_id');
-    }
 }
