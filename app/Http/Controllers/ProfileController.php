@@ -3,12 +3,12 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\User;
 use Illuminate\Support\Facades\DB;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Foundation\Auth\RegistersUsers;
+use App\User;
 use App\News;
 use Auth;
 
@@ -19,7 +19,7 @@ class ProfileController extends Controller
       $teams = DB::table('teams')->get();
        return view('profile', ['teams' => $teams]);
   }
-  
+
   public function edit()
   {
       $teams = DB::table('teams')->get();

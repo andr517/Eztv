@@ -9,11 +9,6 @@
     <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
     </script>
     <link rel="stylesheet" href="{{ asset('/css/style.css') }}">
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" rel="stylesheet" />
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"/>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
-    <script src="{{ asset('/js/carousel.js') }}"></script>
   </head>
 
   <body>
@@ -36,6 +31,9 @@
           </a>
           <a href="/matches" class="navbar-item">
             Matches
+          </a>
+          <a href="/users" class="navbar-item">
+            Members
           </a>
         </div>
         <div class="navbar-end">
@@ -71,5 +69,6 @@
           </p>
         </div>
     </div>
-    </body>
-  </html>
+  </body>
+
+</html>
