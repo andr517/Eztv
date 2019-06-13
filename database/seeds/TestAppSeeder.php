@@ -26,7 +26,7 @@ class TestAppSeeder extends Seeder
           'picture'       => 'https://pbs.twimg.com/profile_images/1385859268/aSDfg.jpg',
           'info'          => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Lobortis feugiat vivamus at augue eget arcu dictum varius. Purus viverra accumsan in nisl. Praesent semper feugiat nibh sed pulvinar proin gravida hendrerit lectus. Sit amet mauris commodo quis imperdiet massa tincidunt nunc pulvinar. Lorem ipsum dolor sit amet consectetur adipiscing elit pellentesque habitant. Rutrum tellus pellentesque eu tincidunt tortor aliquam nulla. In iaculis nunc sed augue. Ornare quam viverra orci sagittis eu. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Lobortis feugiat vivamus at augue eget arcu dictum varius. Purus viverra accumsan in nisl. Praesent semper feugiat nibh sed pulvinar proin gravida hendrerit lectus. Sit amet mauris commodo quis imperdiet massa tincidunt nunc pulvinar. Lorem ipsum dolor sit amet consectetur adipiscing elit pellentesque habitant. Rutrum tellus pellentesque eu tincidunt tortor aliquam nulla. In iaculis nunc sed augue. Ornare quam viverra orci sagittis eu.',
           'group'         => 1,
-          'password' => 12345678
+          'password'      => 12345678
       ));
 
       $userTwo = User::create(array(
@@ -39,7 +39,7 @@ class TestAppSeeder extends Seeder
           'picture'       => 'https://www.lidl.se/statics/lidl-offering-se/ds_img/assets_600_x/lidl-logo_600x600.jpg',
           'info'          => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Lobortis feugiat vivamus at augue eget arcu dictum varius. Purus viverra accumsan in nisl. Praesent semper feugiat nibh sed pulvinar proin gravida hendrerit lectus. Sit amet mauris commodo quis imperdiet massa tincidunt nunc pulvinar. Lorem ipsum dolor sit amet consectetur adipiscing elit pellentesque habitant. Rutrum tellus pellentesque eu tincidunt tortor aliquam nulla. In iaculis nunc sed augue. Ornare quam viverra orci sagittis eu. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Lobortis feugiat vivamus at augue eget arcu dictum varius. Purus viverra accumsan in nisl. Praesent semper feugiat nibh sed pulvinar proin gravida hendrerit lectus. Sit amet mauris commodo quis imperdiet massa tincidunt nunc pulvinar. Lorem ipsum dolor sit amet consectetur adipiscing elit pellentesque habitant. Rutrum tellus pellentesque eu tincidunt tortor aliquam nulla. In iaculis nunc sed augue. Ornare quam viverra orci sagittis eu.',
           'group'         => 1,
-          'password' => 12345678
+          'password'      => 12345678
       ));
 
       $userThree = User::create(array(
@@ -52,10 +52,11 @@ class TestAppSeeder extends Seeder
           'picture'       => 'https://coubsecure-s.akamaihd.net/get/b79/p/coub/simple/cw_timeline_pic/ad5d08a796b/924cfde2e93cfa911fe6b/med_1473493160_image.jpg',
           'info'          => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Lobortis feugiat vivamus at augue eget arcu dictum varius. Purus viverra accumsan in nisl. Praesent semper feugiat nibh sed pulvinar proin gravida hendrerit lectus. Sit amet mauris commodo quis imperdiet massa tincidunt nunc pulvinar. Lorem ipsum dolor sit amet consectetur adipiscing elit pellentesque habitant. Rutrum tellus pellentesque eu tincidunt tortor aliquam nulla. In iaculis nunc sed augue. Ornare quam viverra orci sagittis eu.',
           'group'         => 0,
-          'password' => 12345678
+          'password'      => 12345678
       ));
       User::create(array(
-          'name'         => 'bhopper44',
+          'name'          => 'bhopper44',
+          'userName'      => 'bho',
           'email'         => 'a@eztv.se',
           'country'       => 'Brazil',
           'flag'          => 'https://www.countries-ofthe-world.com/flags-normal/flag-of-Brazil.png',
@@ -66,7 +67,8 @@ class TestAppSeeder extends Seeder
           'password' => 12345678
       ));
       User::create(array(
-          'name'         => 'TheSuperMan',
+          'name'          => 'TheSuperMan',
+          'userName'      => 'TheMan',
           'email'         => 'b@eztv.se',
           'country'       => 'Greece',
           'flag'          => 'https://www.countries-ofthe-world.com/flags-normal/flag-of-Greece.png',
