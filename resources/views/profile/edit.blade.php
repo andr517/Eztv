@@ -62,9 +62,9 @@
             </div>
 
             <div class="field">
-              <label class="label">Flag</label>
+              <label class="label">Banner</label>
               <div class="control">
-                <input class="input" placeholder="Url" name="flag" value="{{ $user->flag }}"/>
+                <input class="input" placeholder="Url" name="Banner" value="{{ $user->banner }}"/>
               </div>
             </div>
 
