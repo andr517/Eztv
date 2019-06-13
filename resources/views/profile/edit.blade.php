@@ -5,7 +5,11 @@
 @section('content')
 @if ($user = Auth::user())
 @if (true)
-<form action="{{ action('ProfileController@update') }}" method="POST" class="content" >
+  <div class="columns">
+      <div class="column">
+        {{-- Include Header --}}
+          @include('profile\header')
+          <form action="{{ action('ProfileController@update') }}" method="POST" class="content" >
     <input type="hidden" name="_token" value="{{ csrf_token() }}">
           <div class="field">
             <label class="label">Profile Picture</label>
@@ -33,7 +37,7 @@
                 <input class="input" name="email" type="email" value="{{ $user->email }}">
               </div>
             </div>
-            
+
 
             <div class="field">
               <label class="label">Show Email In Profile?</label>
@@ -64,12 +68,12 @@
             <div class="field">
               <label class="label">Banner</label>
               <div class="control">
-                <input class="input" placeholder="Url" name="Banner" value="{{ $user->banner }}"/>
+                <input class="input" placeholder="Url" name="banner" value="{{ $user->banner }}"/>
               </div>
             </div>
 
             <div class="field">
-              <label class="label">Info</label>
+              <label class="label">Information</label>
               <div class="control">
                 <textarea class="textarea" placeholder="User Info" name="info">{{ $user->info }}</textarea>
               </div>
@@ -77,6 +81,14 @@
 
             <input class="button is-medium" type="submit" name="" value="Submit">
           </form>
+          <hr>
+        </div>
+        @include('sidebar')
+      </div>
+      @else
+      <div class="section is-large has-text-centered">
+        <h1 class="title">You don't have permission to view this page!</h1>
+      </div>
           @endif
   @endif
 @endsection

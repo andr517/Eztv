@@ -5,7 +5,7 @@
 @section('content')
   <div class="columns">
     <div class="column">
-      <div class="hero" style="background-image: url('https://static.photocdn.pt/images/articles/2017_1/iStock-545347988.jpg'); background-size: cover; background-repeat: no-repeat;">
+      <div class="hero" style="background-image: url('{{ $user->banner }}'); background-size: cover; background-repeat: no-repeat;">
       <div class="tile is-ancestor">
         <div class="tile is-vertical">
           <div class="tile" style="">
@@ -19,7 +19,10 @@
                 <article class="tile is-child is-12">
                   <ul style="margin-top: 1rem;">
                     <li>
-                      <p><strong>Username:</strong> {{ $user->name }}</p>
+                      <p><strong>Username:</strong> {{ $user->userName }}</p>
+                    </li>
+                    <li>
+                      <p><strong>Name:</strong> {{ $user->name }}</p>
                     </li>
                     @if($user->emailAnswer)
                      <li>
@@ -30,7 +33,7 @@
                       <p><strong>Registered:</strong> {{ date("Y-m-d", strtotime($user->created_at)) }}</p>
                     </li>
                     <li>
-                      <p><strong>Country:</strong> </p>
+                      <p><strong>Country:</strong> <img src="{{ $user->flag }}" alt="{{ $user->country }}" style="width: 22px; height: 16px;"> {{ $user->country }}</p>
                     </li>
                     @if($user->group > 0)
                       <li>

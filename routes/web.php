@@ -17,8 +17,8 @@ Route::get('/createTeam', 'TeamsController@createTeamView');
 Route::post('/teams/createTeam', 'TeamsController@createTeamPost');
 
 Route::get('/profile', 'ProfileController@profile');
-Route::get('/profile/info/edit', 'ProfileController@edit');
-Route::post('/profile/info/edit', 'ProfileController@update');
+Route::get('/profile/edit', 'ProfileController@edit');
+Route::post('/profile/edit', 'ProfileController@update');
 
 Route::get('/profile/info', 'ProfileController@info');
 Route::get('/profile/teams', 'ProfileController@teams');

@@ -21,7 +21,7 @@ class TestAppSeeder extends Seeder
           'userName'      => 'jotner',
           'email'         => 'test@eztv.se',
           'country'       => 'Australia',
-          'flag'          => 'https://www.countries-ofthe-world.com/flags-normal/flag-of-Australia.png',
+          'flag'          => 'http://flags.fmcdn.net/data/flags/w580/au.png',
           'banner'        => 'https://s23527.pcdn.co/wp-content/uploads/2019/04/3-tips-1-745x419.jpg.optimal.jpg',
           'picture'       => 'https://pbs.twimg.com/profile_images/1385859268/aSDfg.jpg',
           'info'          => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Lobortis feugiat vivamus at augue eget arcu dictum varius. Purus viverra accumsan in nisl. Praesent semper feugiat nibh sed pulvinar proin gravida hendrerit lectus. Sit amet mauris commodo quis imperdiet massa tincidunt nunc pulvinar. Lorem ipsum dolor sit amet consectetur adipiscing elit pellentesque habitant. Rutrum tellus pellentesque eu tincidunt tortor aliquam nulla. In iaculis nunc sed augue. Ornare quam viverra orci sagittis eu. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Lobortis feugiat vivamus at augue eget arcu dictum varius. Purus viverra accumsan in nisl. Praesent semper feugiat nibh sed pulvinar proin gravida hendrerit lectus. Sit amet mauris commodo quis imperdiet massa tincidunt nunc pulvinar. Lorem ipsum dolor sit amet consectetur adipiscing elit pellentesque habitant. Rutrum tellus pellentesque eu tincidunt tortor aliquam nulla. In iaculis nunc sed augue. Ornare quam viverra orci sagittis eu.',
@@ -34,7 +34,7 @@ class TestAppSeeder extends Seeder
           'userName'      => 'lidl',
           'email'         => 'test2@eztv.se',
           'country'       => 'Sweden',
-          'flag'          => 'https://www.countries-ofthe-world.com/flags-normal/flag-of-Sweden.png',
+          'flag'          => 'http://flags.fmcdn.net/data/flags/w580/se.png',
           'banner'        => 'https://f.nordiskemedier.dk/24ndu8ime0ij38tb.jpg',
           'picture'       => 'https://www.lidl.se/statics/lidl-offering-se/ds_img/assets_600_x/lidl-logo_600x600.jpg',
           'info'          => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Lobortis feugiat vivamus at augue eget arcu dictum varius. Purus viverra accumsan in nisl. Praesent semper feugiat nibh sed pulvinar proin gravida hendrerit lectus. Sit amet mauris commodo quis imperdiet massa tincidunt nunc pulvinar. Lorem ipsum dolor sit amet consectetur adipiscing elit pellentesque habitant. Rutrum tellus pellentesque eu tincidunt tortor aliquam nulla. In iaculis nunc sed augue. Ornare quam viverra orci sagittis eu. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Lobortis feugiat vivamus at augue eget arcu dictum varius. Purus viverra accumsan in nisl. Praesent semper feugiat nibh sed pulvinar proin gravida hendrerit lectus. Sit amet mauris commodo quis imperdiet massa tincidunt nunc pulvinar. Lorem ipsum dolor sit amet consectetur adipiscing elit pellentesque habitant. Rutrum tellus pellentesque eu tincidunt tortor aliquam nulla. In iaculis nunc sed augue. Ornare quam viverra orci sagittis eu.',
@@ -47,7 +47,7 @@ class TestAppSeeder extends Seeder
           'userName'      => 'blyatman',
           'email'         => 'test3@eztv.se',
           'country'       => 'Finland',
-          'flag'          => 'https://www.countries-ofthe-world.com/flags-normal/flag-of-Finland.png',
+          'flag'          => 'http://flags.fmcdn.net/data/flags/w580/fi.png',
           'banner'        => 'https://www.jaktojagare.se/upload/_Articles/20245/Images/13937/vildren.jpg/Large/vildren.jpg',
           'picture'       => 'https://coubsecure-s.akamaihd.net/get/b79/p/coub/simple/cw_timeline_pic/ad5d08a796b/924cfde2e93cfa911fe6b/med_1473493160_image.jpg',
           'info'          => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Lobortis feugiat vivamus at augue eget arcu dictum varius. Purus viverra accumsan in nisl. Praesent semper feugiat nibh sed pulvinar proin gravida hendrerit lectus. Sit amet mauris commodo quis imperdiet massa tincidunt nunc pulvinar. Lorem ipsum dolor sit amet consectetur adipiscing elit pellentesque habitant. Rutrum tellus pellentesque eu tincidunt tortor aliquam nulla. In iaculis nunc sed augue. Ornare quam viverra orci sagittis eu.',
@@ -55,11 +55,11 @@ class TestAppSeeder extends Seeder
           'password'      => 12345678
       ));
       User::create(array(
-          'name'          => 'bhopper44',
-          'userName'      => 'bho',
+          'name'          => 'Pedro Padrone',
+          'userName'      => 'bhopper44',
           'email'         => 'a@eztv.se',
           'country'       => 'Brazil',
-          'flag'          => 'https://www.countries-ofthe-world.com/flags-normal/flag-of-Brazil.png',
+          'flag'          => 'http://flags.fmcdn.net/data/flags/w580/br.png',
           'banner'        => 'https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/da248222925791.5631a88ca51e1.png',
           'picture'       => 'https://www.tec.com.pe/wp-content/uploads/2019/03/master-chief-thumbnail-708x398-cd2e0516ab49409c823985737dfad08b.jpg',
           'info'          => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Lobortis feugiat vivamus at augue eget arcu dictum varius. Purus viverra accumsan in nisl. Praesent semper feugiat nibh sed pulvinar proin gravida hendrerit lectus. Sit amet mauris commodo quis imperdiet massa tincidunt nunc pulvinar. Lorem ipsum dolor sit amet consectetur adipiscing elit pellentesque habitant. Rutrum tellus pellentesque eu tincidunt tortor aliquam nulla. In iaculis nunc sed augue. Ornare quam viverra orci sagittis eu.',
@@ -67,11 +67,11 @@ class TestAppSeeder extends Seeder
           'password' => 12345678
       ));
       User::create(array(
-          'name'          => 'TheSuperMan',
-          'userName'      => 'TheMan',
+          'name'          => 'Kostas Konstantinos',
+          'userName'      => 'TheSuperMan',
           'email'         => 'b@eztv.se',
           'country'       => 'Greece',
-          'flag'          => 'https://www.countries-ofthe-world.com/flags-normal/flag-of-Greece.png',
+          'flag'          => 'http://flags.fmcdn.net/data/flags/w580/gr.png',
           'banner'        => 'https://www.rspcapetinsurance.org.au/getattachment/19a07b8d-1265-4a5b-af9e-93b4cea47401/why-is-my-dog-barking.aspx',
           'picture'       => 'https://ichef.bbci.co.uk/news/660/cpsprodpb/16BB/production/_106591850_untitleddesign-3.jpg',
           'info'          => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Lobortis feugiat vivamus at augue eget arcu dictum varius. Purus viverra accumsan in nisl. Praesent semper feugiat nibh sed pulvinar proin gravida hendrerit lectus. Sit amet mauris commodo quis imperdiet massa tincidunt nunc pulvinar. Lorem ipsum dolor sit amet consectetur adipiscing elit pellentesque habitant. Rutrum tellus pellentesque eu tincidunt tortor aliquam nulla. In iaculis nunc sed augue. Ornare quam viverra orci sagittis eu.',

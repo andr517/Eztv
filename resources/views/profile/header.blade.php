@@ -10,30 +10,46 @@
 @endphp
 
 
-<div class="hero" style="background-image: url('{{Auth::user()->banner }}'); background-size: contain;">
+<div class="hero" style="background-image: url('{{Auth::user()->banner }}'); background-size: cover; background-repeat: no-repeat;">
     <div class="tile is-ancestor">
         <div class="tile is-vertical">
           <div class="tile" style="">
             <div class="tile is-parent">
               <article class="tile image is-child is-4" style="max-height:250px; max-width:230px;">
-                <figure class="image is-4" style="margin-right: 2rem">
-                  <img src="{{ Auth::user()->picture }}">
+                <figure class="image is-1by1">
+                  <img src="{{ Auth::user()->picture }}" style="border: 20px solid transparent;">
                 </figure>
               </article>
             <div class="tile" >
               <article class="tile is-child is-12">
-                <h2 class="title is-4" style="margin-top: 1rem;">Name:</h2>
-                <h2 class="subtitle">{{ Auth::user()->name }}</h2>
-                <h2 class="title is-4" style="margin-top: 1rem;">Country:</h2>
-                <h2 class="subtitle">{{ Auth::user()->country }}</h2>
-                @if(Auth::user()->emailAnswer)
-                <h2 class="title is-4">Email:</h2>
-                <h2 class="subtitle">{{ Auth::user()->email }}</h2>
-                @endif
-              </article>
-            </div>
-            <div class="tile" >
-              <article class="tile is-child is-12">
+                <ul style="margin-top: 1rem;">
+                  <li>
+                    <p><strong>Username:</strong> {{ Auth::user()->userName }}</p>
+                  </li>
+                  <li>
+                    <p><strong>Name:</strong> {{ $user->name }}</p>
+                  </li>
+                  @if(Auth::user()->emailAnswer)
+                   <li>
+                     <p><strong>E-mail:</strong> {{ Auth::user()->email }}</p>
+                   </li>
+                  @endif
+                  <li>
+                    <p><strong>Registered:</strong> {{ date("Y-m-d", strtotime(Auth::user()->created_at)) }}</p>
+                  </li>
+                  <li>
+                    <p><strong>Country:</strong> <img src="{{ Auth::user()->flag }}" alt="{{ Auth::user()->country }}" style="width: 22px; height: 16px;"> {{ Auth::user()->country }}</p>
+                  </li>
+                  @if(Auth::user()->group > 0)
+                    <li>
+                      <p><strong>Rank:</strong> Administrator</p>
+                    </li>
+                  @else
+                    <li>
+                      <p><strong>Rank:</strong> Member</p>
+                    </li>
+                   @endif
+                </ul>
               </article>
             </div>
           </div>
@@ -50,36 +66,17 @@
             <span aria-hidden="true"></span>
           </a>
         </div>
-      
+
         <div id="navbarBasicExample" class="navbar-menu">
           <div class="navbar-start">
-            <a class="navbar-item" href="/profile/info/">
-              Info
+            <a class="navbar-item" href="/profile">
+              Information
             </a>
-            <a class="navbar-item" href="/profile/teams/">
-              Teams
+            <a class="navbar-item" href="/profile/edit/">
+              Settings
             </a>
-            <a class="navbar-item">
-              Guest Log
-            </a>
-          </div>
-      
-          <div class="navbar-end">
-            <div class="navbar-item">
-              <div class="buttons">
-                <a class="button is-primary">
-                  <strong>Sign up</strong>
-                </a>
-                <a class="button is-light">
-                  Log in
-                </a>
-              </div>
-            </div>
           </div>
         </div>
       </nav>
+        <hr>
 </div>
-
-
-
-

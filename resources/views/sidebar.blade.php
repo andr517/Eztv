@@ -4,7 +4,7 @@
   use App\Teams;
   use App\Players;
 
-  $users = User::orderBy('name', 'ASC')->get();
+  $users = User::orderBy('userName', 'ASC')->get();
   $news = News::all();
   $teams = Teams::all();
   $player = Players::with('teams')->find(2);
@@ -49,7 +49,7 @@
     <li class="list-item list-title" style="border-bottom: 1px solid #dbdbdb">Members</li>
     @foreach($users as $user)
       <a class="list-item" href="{{ URL('/users/'.$user->id )}}">
-        {{ $user->name }}
+        <img src="{{ $user->flag }}" style="height: 14px; width: 20px;" alt=""> {{ $user->userName }}
       </a>
     @endforeach
   </div>
