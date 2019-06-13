@@ -46,7 +46,7 @@
   </div>
   <hr>
   <div class="list is-hoverable">
-    <li class="list-item list-title" style="border-bottom: 1px solid #dbdbdb">Memberlist</li>
+    <li class="list-item list-title" style="border-bottom: 1px solid #dbdbdb">Members</li>
     @foreach($users as $user)
       <a class="list-item" href="{{ URL('/users/'.$user->id )}}">
         {{ $user->name }}
@@ -57,44 +57,44 @@
   <h2 class="news-title" style="text-align: center;">Player of the Week</h2>
   <div class="card">
     <figure class="image is-1by1">
-      <a href="{{ URL('/teams/team/'.$player->teams->id )}}"><img src="{{ $player->playerUrl }}" alt="Player Image"></a>
+      <a href="{{ URL('/teams/team/'.$player->teams->id )}}"><img src="{{ $player->playerUrl }}" alt="{{ $player->alias }}"></a>
     </figure>
     <div class="card-content has-text-centered player-week">
       <li>
-        <img src="{{ $player->flag}}"
+        <img src="{{ $player->flag }}"
           alt="" style=" height: 14px;"> <strong style="font-size: 20px;">{{ $player->alias }}</strong>
         </li>
         <li>
           {{ $player->name }}
         </li>
         <li>
-          <img src="{{ $player->teams->logoUrl }}" alt="Team Logotype" style="width:14px; height: 14px;"> <a href="{{ URL('/teams/team/'.$player->teams->id )}}">{{ $player->teams->name }}</a>
+          <img src="{{ $player->teams->logoUrl }}" alt="{{ $player->teams->name }}" style="width:14px; height: 14px;"> <a href="{{ URL('/teams/team/'.$player->teams->id )}}">{{ $player->teams->name }}</a>
         </li>
       </div>
   </div>
   <ul class="social">
     <li>
-      <a href="#" title="">
+      <a href="#">
         <i class="icon fab fa-twitter"></i>
       </a>
     </li>
     <li>
-      <a href="#" title="">
+      <a href="#">
         <i class="icon fab fa-facebook"></i>
       </a>
     </li>
     <li>
-      <a href="#" title="">
+      <a href="#">
         <i class="icon fab fa-youtube"></i>
       </a>
     </li>
     <li>
-      <a href="#" title="">
+      <a href="#">
         <i class="icon fab fa-instagram"></i>
       </a>
     </li>
     <li>
-      <a href="#" title="">
+      <a href="#">
         <i class="icon fab fa-discord"></i>
       </a>
     </li>
