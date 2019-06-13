@@ -18,6 +18,7 @@ class TestAppSeeder extends Seeder
 
       $userOne = User::create(array(
           'name'         => 'Jonathan Eriksson',
+          'userName'         => 'jotner',
           'email'         => 'test@eztv.se',
           'group'         => 1,
           'password' => 12345678
@@ -25,6 +26,7 @@ class TestAppSeeder extends Seeder
 
       $userTwo = User::create(array(
           'name'         => 'André Ingman',
+          'userName'         => 'lidl',
           'email'         => 'test2@eztv.se',
           'group'         => 0,
           'password' => 12345678
@@ -32,6 +34,7 @@ class TestAppSeeder extends Seeder
 
       $userThree = User::create(array(
           'name'         => 'Johan Westin',
+          'userName'         => 'blyatman',
           'email'         => 'test3@eztv.se',
           'group'         => 0,
           'password' => 12345678

@@ -10,7 +10,7 @@
 @endphp
 
 
-    <div class="hero" style="background-image: url('https://images2.alphacoders.com/743/thumb-350-74302.jpg'); background-size: contain;">
+<div class="hero" style="background-image: url('{{Auth::user()->banner }}'); background-size: contain;">
     <div class="tile is-ancestor">
         <div class="tile is-vertical">
           <div class="tile" style="">
@@ -24,6 +24,8 @@
               <article class="tile is-child is-12">
                 <h2 class="title is-4" style="margin-top: 1rem;">Name:</h2>
                 <h2 class="subtitle">{{ Auth::user()->name }}</h2>
+                <h2 class="title is-4" style="margin-top: 1rem;">Country:</h2>
+                <h2 class="subtitle">{{ Auth::user()->country }}</h2>
                 @if(Auth::user()->emailAnswer)
                 <h2 class="title is-4">Email:</h2>
                 <h2 class="subtitle">{{ Auth::user()->email }}</h2>

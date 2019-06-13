@@ -14,9 +14,16 @@
             </div>
           </div>
             <div class="field">
-              <label class="label">Name</label>
+              <label class="label">Full Name</label>
               <div class="control">
               <input class="input" name="name" type="text" value="{{ $user->name }}">
+              </div>
+            </div>
+
+            <div class="field">
+              <label class="label">User Name</label>
+              <div class="control">
+              <input class="input" name="userName" type="text" value="{{ $user->userName }}">
               </div>
             </div>
 
@@ -41,13 +48,34 @@
             </div>
 
             <div class="field">
+              <label class="label">Country</label>
+              <div class="control">
+                <input class="input" placeholder="Country" name="country" value="{{ $user->country }}"/>
+              </div>
+            </div>
+
+            <div class="field">
+              <label class="label">Flag</label>
+              <div class="control">
+                <input class="input" placeholder="Url" name="flag" value="{{ $user->flag }}"/>
+              </div>
+            </div>
+
+            <div class="field">
+              <label class="label">Flag</label>
+              <div class="control">
+                <input class="input" placeholder="Url" name="flag" value="{{ $user->flag }}"/>
+              </div>
+            </div>
+
+            <div class="field">
               <label class="label">Info</label>
               <div class="control">
                 <textarea class="textarea" placeholder="User Info" name="info">{{ $user->info }}</textarea>
               </div>
             </div>
-                 
-            <input class="button is-medium" type="submit" name="">
+
+            <input class="button is-medium" type="submit" name="" value="Submit">
           </form>
           @endif
   @endif

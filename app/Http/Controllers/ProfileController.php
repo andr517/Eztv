@@ -46,9 +46,13 @@ class ProfileController extends Controller
         // ]);
         $user = Auth::user();
           $user->name = request('name');
+          $user->userName = request('userName');
           $user->email = request('email');
           $user->emailAnswer = request('answer');
           $user->info = request('info');
+          $user->country = request('country');
+          $user->flag = request('flag');
+          $user->banner = request('banner');
           $user->picture = request('picture');
           $user->save();
           return redirect('/profile');
