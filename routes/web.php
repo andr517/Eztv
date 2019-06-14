@@ -13,8 +13,17 @@
 
 Route::get('/teams', 'TeamsController@teams');
 Route::get('/teams/team/{id}', 'TeamsController@team');
-Route::get('/createTeam', 'TeamsController@createTeamView');
+Route::get('/teams/createTeam', 'TeamsController@createTeamView');
 Route::post('/teams/createTeam', 'TeamsController@createTeamPost');
+Route::get('/teams/editTeams/{id}', 'TeamsController@editTeamView');
+Route::post('/teams/editTeams/{id}', 'TeamsController@editTeamSave');
+Route::get('/teams/deleteTeams/{id}', 'TeamsController@deleteTeam');
+
+Route::get('/teams/team/createPlayer/{id}', 'TeamsController@createPlayerView');
+Route::post('/teams/team/createPlayer/{id}', 'TeamsController@createPlayerPost');
+Route::get('/teams/team/editPlayers/{id}', 'TeamsController@editPlayersView');
+Route::post('/teams/team/editPlayers/{id}', 'TeamsController@editPlayerSave');
+Route::get('/teams/team/deletePlayers/{id}', 'TeamsController@deletePlayer');
 
 Route::get('/matches', 'PagesController@matches');
 Route::get('/profile', 'PagesController@profile');

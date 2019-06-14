@@ -32,6 +32,9 @@
    </div>
  </nav>
 </div>
+@if ($user = Auth::user() && Auth::user()->group > 0)
+    <a href="{{ URL('/teams/team/createPlayer/'.$teams->id)}}"><button type="button" class="button" name="button">Add Player</button></a>
+@endif
 <div class="columns is-multiline">
   @foreach ($players as $player)
   <div class="column">
@@ -43,16 +46,20 @@
     </figure>
   </div>
   <div class="card-content">
-    <div class="media">
-      <div class="media-left">
-      </div>
-      <div class="media-content">
-        <p class="subtitle is-5">{{$player->alias}} <img style="width:15px;height:10px;" src="{{$player->flag}}"></p>
+      <div class="media-content has-text-centered">
+        <p class="subtitle is-5">{{$player->alias}} <img style="width:22px;height:15px;" src="{{$player->flag}}"></p>
         <p class="subtitle is-6">{{$player->name}}</p>
-        <p>{{$player->age}}</p>
-        <p>{{$player->rating}}</p>
       </div>
+      <div class="card-footer">
+        <p class="card-footer-item">Age  {{$player->age}}</p>
+        <p class="card-footer-item">Rating  {{$player->rating}}</p>
+      </div>
+      @if ($user = Auth::user() && Auth::user()->group > 0)
+      <div class="has-text-centered">
+        <a href="{{ URL('/teams/team/editPlayers/'.$player->id)}}"><button type="button" class="button" name="button">Edit</button></a>
+        <a href="{{ URL('/teams/team/deletePlayers/'.$player->id)}}"><button type="button" class="button" name="button">Delete</button></a>
     </div>
+    @endif
   </div>
 </div>
 
