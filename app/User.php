@@ -16,7 +16,11 @@ class User extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'name', 'email', 'password', 'picture', 'info'
+        'name', 'userName', 'email', 'password', 'picture', 'info', 'emailAnswer', "country", "flag", "banner"
+    ];
+
+    protected $attributes = [
+        'emailAnswer' => 0,
     ];
 
     /**
@@ -40,9 +44,5 @@ class User extends Authenticatable
     public function news()
     {
       return $this->hasMany('App\News');
-    }
-
-    public function forums() {
-        return $this->belongsToMany('app\Forum', 'comments', 'user_id', 'forum_id');
     }
 }

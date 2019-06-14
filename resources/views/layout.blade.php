@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.4/css/bulma.min.css">
     <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+    </script>
     <link rel="stylesheet" href="{{ asset('/css/style.css') }}">
   </head>
 
@@ -30,6 +31,9 @@
           </a>
           <a href="/matches" class="navbar-item">
             Matches
+          </a>
+          <a href="/users" class="navbar-item">
+            Members
           </a>
         </div>
         <div class="navbar-end">
@@ -65,5 +69,6 @@
           </p>
         </div>
     </div>
-    </body>
-  </html>
+  </body>
+
+</html>

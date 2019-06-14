@@ -58,16 +58,8 @@ a:hover {
     font-size: 0.9rem;
 }
 
-.all-news {
-    text-align: left;
-}
-
 .log-icon {
     margin-left: 5px;
-}
-
-.booking-col {
-    background-color: #fff;
 }
 
 hr {
@@ -113,31 +105,6 @@ ul.social>li>a:hover {
     margin-left: 0px;
 }
 
-.tickets {
-    color: #4a4a4a;
-    font-size: 20px;
-    border: 1px solid #ccc;
-    width: 50%;
-    margin: 0 auto;
-    border-radius: 4px;
-}
-
-.ticket-icon {
-    color: #4a4a4a;
-    font-size: 60px;
-    margin-bottom: 20px;
-}
-
-.movie-card {
-    height: 100%;
-}
-
-.movie-title {
-    color: #4a4a4a !important;
-    font-size: 22px !important;
-    font-weight: bold !important;
-}
-
 figure img {
     object-fit: cover;
 }
@@ -148,6 +115,29 @@ figure img {
 
 li {
     list-style-type: none;
+}
+
+.welcome-text {
+    color: #fff;
+    padding-top: 160px;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 1.5rem;
+    text-shadow: 1px 1px 2px #000;
+}
+
+.team-link:hover {
+    text-decoration: none;
+}
+
+.team-name {
+    transition: color .3s;
+}
+
+.team-name:hover {
+    color: #00b0cd;
+    transition: color .3s;
+    text-decoration: none !important;
 }
 
 /***********
@@ -260,6 +250,24 @@ NEWS BEGINS
 /***********
 NEWS ENDS
 ***********/
+.user-title {
+    color: #fff;
+}
+
+.user-rank {
+    color: #fff;
+}
+
+.tile {
+    color: #fff;
+    text-shadow: 1px 2px 3px #000;
+    font-size: 1.3rem;
+}
+
+.tile strong {
+    color: #fff;
+}
+
 .button {
     border-radius: 3px;
     border: none;
@@ -287,39 +295,6 @@ NEWS ENDS
 }
 
 /* PROFILE STYLING */
-.profile {
-    color: #4a4a4a;
-}
-
-.profile-heading {
-    box-shadow: 0 2px 3px rgba(10, 10, 10, .1), 0 0 0 1px rgba(10, 10, 10, .1);
-    background-color: white;
-}
-
-.profile-menu {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    background-color: #af0f0f;
-}
-
-.profile-menu li {
-    float: left;
-}
-
-.profile-menu li a {
-    display: block;
-    color: white;
-    text-align: center;
-    padding: 16px;
-    text-decoration: none;
-}
-
-.profile-menu li a:hover {
-    background-color: #111111;
-}
-
 .stat-val {
     font-size: 2.8em;
     padding-top: 20px;
@@ -357,7 +332,6 @@ NEWS ENDS
 
 /* FOOTER STYLING */
 .footer {
-    /* background-color: rgba(50, 50, 50); */
     background-color: #0e0f0f;
     color: white;
     padding: 50px;

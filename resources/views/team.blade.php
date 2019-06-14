@@ -1,6 +1,6 @@
 @extends('layout')
 
-@section('title', 'Team - EZTV')
+@section('title', $teams->name . ' - EZTV')
 
 @section('content')
  <div class="section">
