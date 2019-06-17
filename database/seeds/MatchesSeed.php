@@ -3,6 +3,7 @@
 use Illuminate\Database\Seeder;
 use App\Teams;
 use App\Players;
+use App\Matches;
 
 class MatchesSeed extends Seeder
 {
@@ -16,7 +17,7 @@ class MatchesSeed extends Seeder
       $liquid = Teams::create(array(
     'name'         => 'Liquid',
     'rank'         => '1',
-    'teamUrl'      => 'https://i.ytimg.com/vi/Iyd6WdCnEVQ/maxresdefault.jpg',
+    'teamUrl'      => 'https://esportsranks.com/wp-content/uploads/2019/06/Best-CSGO-Team-2.jpg',
     'logoUrl'      => 'https://static.hltv.org/images/team/logo/5973',
     'country'      => 'United States',
     'flag'         => 'https://static.hltv.org/images/bigflags/30x20/US.gif',
@@ -24,7 +25,7 @@ class MatchesSeed extends Seeder
 $astralis = Teams::create(array(
 'name'         => 'Astralis',
 'rank'         => '2',
-'teamUrl'      => 'https://media.tycsports.com/files/2019/01/19/39076/astralis-0.jpg',
+'teamUrl'      => 'https://y4j7y8s9.ssl.hwcdn.net/wp-content/uploads/2018/11/Astralis_Unibet.jpg',
 'logoUrl'      => 'https://static.hltv.org/images/team/logo/6665',
 'country'      => 'Denmark',
 'flag'         => 'https://static.hltv.org/images/bigflags/30x20/DK.gif',
@@ -32,7 +33,7 @@ $astralis = Teams::create(array(
 $ence = Teams::create(array(
 'name'         => 'Ence',
 'rank'         => '3',
-'teamUrl'      => 'https://dotesports-media.nyc3.cdn.digitaloceanspaces.com/wp-content/uploads/2019/02/28154219/D0hbx-QXQAUXSFA.jpg',
+'teamUrl'      => 'https://muropaketti.com/wp-content/uploads/2018/10/ence.png',
 'logoUrl'      => 'https://static.hltv.org/images/team/logo/4869',
 'country'      => 'Finland',
 'flag'         => 'https://static.hltv.org/images/bigflags/30x20/FI.gif',
@@ -48,7 +49,7 @@ $vitality = Teams::create(array(
 $faze = Teams::create(array(
 'name'         => 'FaZe',
 'rank'         => '5',
-'teamUrl'      => 'https://www.wagerbop.com/wp-content/uploads/2018/10/FaZe-Clan.jpg',
+'teamUrl'      => 'https://s3.dexerto.com/thumbnails/_thumbnailLarge/DeKay-Why-FaZe-Clan-could-leave-CSGO-soon.jpg',
 'logoUrl'      => 'https://static.hltv.org/images/team/logo/6667',
 'country'      => 'Europe',
 'flag'         => 'https://static.hltv.org/images/bigflags/30x20/EU.gif',
@@ -56,7 +57,7 @@ $faze = Teams::create(array(
 $navi = Teams::create(array(
 'name'         => 'NAVI',
 'rank'         => '6',
-'teamUrl'      => 'https://navi.gg/upload/10/b6/u_5c1ca66bed003.png',
+'teamUrl'      => 'https://static-cdn.eleague.com/team/Boston-Major_Teams_slates_navi_1.jpg',
 'logoUrl'      => 'https://static.hltv.org/images/team/logo/4608',
 'country'      => 'Russia',
 'flag'         => 'https://static.hltv.org/images/bigflags/30x20/RU.gif',
@@ -147,6 +148,19 @@ $astralis1 = Players::create(array(
 'flag'         => 'https://static.hltv.org/images/bigflags/30x20/DK.gif',
 'playerUrl'    => 'https://static.hltv.org//images/playerprofile/bodyshot/compressed/4954.png',
 'team_id'      =>  $astralis->id,
+));
+//Matches
+$match1 = Matches::create(array(
+'team1'         => 'Liquid',
+'team2'        => 'Astralis',
+'time'          => '19:00',
+'event'          => 'ESL Pro league Season 7',
+));
+$match2 = Matches::create(array(
+'team1'         => 'Fnatic',
+'team2'        => 'Navi',
+'time'          => '15:00',
+'event'          => 'Season 8 Faceit Finals',
 ));
 
     }
