@@ -18,7 +18,7 @@ class PostsController extends Controller
     $teams = Teams::all();
     $player = Players::with('teams')->find(2);
 
-     return view('index', ['news' => $news, 'teams' => $teams, 'player' => $player]);
+    return view('index', ['news' => $news, 'teams' => $teams, 'player' => $player]);
   }
 
   public function post()
@@ -28,7 +28,7 @@ class PostsController extends Controller
     $post = News::all()->find($request);
     $teams = Teams::all();
 
-     return view('posts.post', ['user' => $user, 'post' => $post, 'teams' => $teams]);
+    return view('posts.post', ['user' => $user, 'post' => $post, 'teams' => $teams]);
   }
 
   public function create()
