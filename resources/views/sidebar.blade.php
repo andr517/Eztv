@@ -27,25 +27,6 @@
   </div>
   <hr>
   <div class="list is-hoverable">
-    <li class="list-item list-title">Today's Matches</li>
-    <a class="list-item">
-      <img src="https://static.hltv.org/images/team/logo/5973" alt="" style="width:14px; height: 14px;"> Liquid vs. <img src="https://static.hltv.org/images/team/logo/6665" alt="" style="width:14px; height: 14px;"> Astralis 13:00
-    </a>
-    <a class="list-item">
-      <img src="https://static.hltv.org/images/team/logo/6665" alt=""
-      style="width:14px; height: 14px;"> Astralis vs. <img src="https://static.hltv.org/images/team/logo/4869" alt="" style="width:14px; height: 14px;"> ENCE 14:30
-    </a>
-    <a class="list-item">
-      <img src="https://static.hltv.org/images/team/logo/4869" alt=""
-        style="width:14px; height: 14px;"> ENCE vs. <img src="https://static.hltv.org/images/team/logo/6667" alt="" style="width:14px; height: 14px;"> FaZe 14:00
-    </a>
-    <a class="list-item">
-      <img src="https://static.hltv.org/images/team/logo/9565" alt=""
-        style="width:14px; height: 14px;"> Vitality vs. <img src="https://static.hltv.org/images/team/logo/5973" alt="" style="width:14px; height: 14px;"> Liquid 18:30
-    </a>
-  </div>
-  <hr>
-  <div class="list is-hoverable">
     <li class="list-item list-title" style="border-bottom: 1px solid #dbdbdb">Members</li>
     @foreach($users as $user)
       <a class="list-item" href="{{ URL('/users/'.$user->id )}}">
@@ -72,6 +53,7 @@
         </li>
       </div>
   </div>
+  <hr>
   <ul class="social">
     <li>
       <a href="#">

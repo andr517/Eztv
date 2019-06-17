@@ -26,7 +26,7 @@
                     </li>
                     @if($user->emailAnswer)
                      <li>
-                       <p><strong>E-mail: {{ $user->email }}</p>
+                       <p><strong>E-mail:</strong> {{ $user->email }}</p>
                      </li>
                     @endif
                     <li>
