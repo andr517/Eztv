@@ -3,7 +3,7 @@
 @section('title', 'New Team - EZTV')
 
 @section('content')
-
+@if ($user = Auth::user() && Auth::user()->group > 0)
 <form method="POST" action="<?php echo action('TeamsController@createPlayerPost', $id); ?>">
   @csrf
   <div class="field">
@@ -48,6 +48,11 @@
                     value="Submit">
               </div>
 </form>
+@else
+<div class="section is-large has-text-centered">
+    <h1 class="title">You don't have permission to view this page!</h1>
+</div>
+@endif
 
 
 @endsection
