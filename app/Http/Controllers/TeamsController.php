@@ -107,7 +107,6 @@ class TeamsController extends Controller
   public function deletePlayer($id)
   {
     DB::delete('DELETE from players WHERE id = ?',[$id]);
-    $redir=players::with('teams')->find($id);
-   return redirect('teams/team/'. $redir->teams->id . '');
+   return redirect('/teams');
   }
 }

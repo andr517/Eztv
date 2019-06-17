@@ -3,6 +3,7 @@
 use Illuminate\Database\Seeder;
 use App\Teams;
 use App\Players;
+use App\Matches;
 
 class MatchesSeed extends Seeder
 {
@@ -147,6 +148,19 @@ $astralis1 = Players::create(array(
 'flag'         => 'https://static.hltv.org/images/bigflags/30x20/DK.gif',
 'playerUrl'    => 'https://static.hltv.org//images/playerprofile/bodyshot/compressed/4954.png',
 'team_id'      =>  $astralis->id,
+));
+//Matches
+$match1 = Matches::create(array(
+'team1'         => 'Liquid',
+'team2'        => 'Astralis',
+'time'          => '19:00',
+'event'          => 'ESL Pro league Season 7',
+));
+$match2 = Matches::create(array(
+'team1'         => 'Fnatic',
+'team2'        => 'Navi',
+'time'          => '15:00',
+'event'          => 'Season 8 Faceit Finals',
 ));
 
     }

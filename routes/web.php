@@ -25,6 +25,8 @@ Route::get('/teams/team/editPlayers/{id}', 'TeamsController@editPlayersView');
 Route::post('/teams/team/editPlayers/{id}', 'TeamsController@editPlayerSave');
 Route::get('/teams/team/deletePlayers/{id}', 'TeamsController@deletePlayer');
 
+Route::get('/matches', 'MatchesController@matches');
+
 Route::get('/profile', 'ProfileController@profile');
 Route::get('/profile/edit', 'ProfileController@edit');
 Route::post('/profile/edit', 'ProfileController@update');
