@@ -29,7 +29,7 @@
           <h1 class="news-title"><a href="{{ URL('/posts/'.$post->id )}}">{{ $post->title }}</a></h1>
           <span class="news-content">{{ $post->content }}</span>
           <li>
-            <span class="news-author">By <a href="{{ URL('/users/'.$post->user->id )}}">{{ $post->user->name }}<a></span>
+            <span class="news-author">By <a href="{{ URL('/users/'.$post->user->id )}}">{{ $post->user->name }}</a></span>
           </li>
           @if(Auth::check() && Auth::user()->group > 0)
             <br>

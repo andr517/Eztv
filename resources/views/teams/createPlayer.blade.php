@@ -21,23 +21,23 @@
       <div class="field">
           <label class="label">Age</label>
           <div class="control">
-              <input type="text" class="input" name="age" placeholder="Age" required>
+              <input type="number" class="input" name="age" placeholder="Age" required>
           </div>
         </div>
         <div class="field">
             <label class="label">Rating</label>
             <div class="control">
-                <input type="text" class="input" name="rating" placeholder="Rating" required>
+                <input type="number" class="input" name="rating" placeholder="Rating" required>
             </div>
           </div>
           <div class="field">
-              <label class="label">FlagUrl</label>
+              <label class="label">Flag URL</label>
               <div class="control">
                   <input type="text" class="input" name="flag" placeholder="Flag Url" required>
               </div>
             </div>
             <div class="field">
-                <label class="label">Player Picture Url</label>
+                <label class="label">Player Picture URL</label>
                 <div class="control">
                     <input type="text" class="input" name="playerUrl" placeholder="Player Picture" required>
                 </div>

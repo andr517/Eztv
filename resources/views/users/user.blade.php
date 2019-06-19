@@ -37,11 +37,11 @@
                     </li>
                     @if($user->group > 0)
                       <li>
-                        <p><strong>Rank:</strong> Administrator</p>
+                        <p><strong>Rank:</strong> <i class="fa fa-crown" style="font-size: 18px;" color="gold"></i> Administrator</p>
                       </li>
                     @else
                       <li>
-                        <p><strong>Rank:</strong> Member</p>
+                        <p><strong>Rank:</strong> <i class="fa fa-user" style="font-size: 18px;" color="#00b0cd"></i> Member</p>
                       </li>
                      @endif
                   </ul>

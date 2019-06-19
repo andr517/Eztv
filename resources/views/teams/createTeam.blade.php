@@ -16,7 +16,7 @@
   <div class="field">
       <label class="label">Ranking</label>
       <div class="control">
-          <input type="text" class="input" name="rank" Placeholder="The official ranking of the team" required>
+          <input type="number" class="input" name="rank" Placeholder="The official ranking of the team" required>
       </div>
   </div>
   <div class="field">
