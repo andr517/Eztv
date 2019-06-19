@@ -13,16 +13,16 @@ class TeamsController extends Controller
 {
   public function teams()
   {
-      $teams = Teams::all();
-      return view('teams', ['teams' => $teams]);
+    $teams = Teams::all();
+    return view('teams', ['teams' => $teams]);
   }
   public function team()
   {
-      $teams = Teams::all();
-      $request = request()->route('id');
-      $teams = DB::table('teams')->find($request);
-      $players = Players::with('teams')->where('team_id',$request)->get();
-      return view('team', ['teams' => $teams,'players' => $players]);
+    $teams = Teams::all();
+    $request = request()->route('id');
+    $teams = DB::table('teams')->find($request);
+    $players = Players::with('teams')->where('team_id',$request)->get();
+    return view('team', ['teams' => $teams,'players' => $players]);
   }
   public function createTeamView()
   {
